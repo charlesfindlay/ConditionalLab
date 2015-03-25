@@ -114,7 +114,8 @@ namespace ConditionalLab
 
 
             // Multiples of 3 & 5 under 1000
-
+            
+            /*
             int sum = 0;
 
             for (int i = 1; i < 1000; i++)
@@ -122,9 +123,27 @@ namespace ConditionalLab
 
             Console.WriteLine("The sum of multiples of 3 or 5 below 1000 is {0}", sum);
             
+            Console.ReadLine();
+            */
 
 
+            // Project Euler problem 2 Even Fibonacci numbers
 
+            double first = 0;
+            double second = 1;
+            double evenSum = 0;
+            double test = 0;
+
+            while (first < 4000000 && second < 4000000)
+            {
+                test = first + second;
+                if (test % 2 == 0)
+                    evenSum += test;
+                first = second;
+                second = test;
+            }
+
+            Console.WriteLine(evenSum);
 
             Console.ReadLine();
 
