@@ -52,17 +52,24 @@ namespace ConditionalLab
             Console.Write("Here is the time: ");
             Console.WriteLine(moment.ToLongTimeString());
 
-            if (seconds == 0)
-                Console.WriteLine("The new minute is just beginning");
-            else if (seconds == 15)
-                Console.WriteLine("We're one quarter done");
-            else if (seconds == 30)
-                Console.WriteLine("Half way there");
-            else if (seconds == 45)
-                Console.WriteLine("Getting close to down");
-            else
-                Console.WriteLine("Working on it");
-
+            switch (seconds)
+            {
+                case (0):
+                    Console.WriteLine("The new minute is just beginning");
+                    break;
+                case (15):
+                    Console.WriteLine("We're one quarter done");
+                    break;
+                case (30):
+                    Console.WriteLine("Half way there");
+                    break;
+                case (45):
+                    Console.WriteLine("Getting close to down");
+                    break;
+                default:
+                    Console.WriteLine("Working on it");
+                    break;
+            }
 
             Console.ReadLine();
 
