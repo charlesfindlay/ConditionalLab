@@ -79,17 +79,19 @@ namespace ConditionalLab
 
             // FizzBuzz
 
+            string number = string.Empty;
+
             for (int i = 1; i <= 100; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
-                    Console.WriteLine("Fizzbuzz");
-                else if (i % 3 == 0)
-                    Console.WriteLine("Fizz");
-                else if (i % 5 == 0)
-                    Console.WriteLine("Buzz");
+                if (i % 3 != 0 && i % 5 != 0)
+                    number = i.ToString();
                 else
-                    Console.WriteLine(i);
+                {
+                    number = (i % 3 == 0) ? "Fizz" : string.Empty;
+                    number += (i % 5 == 0) ? "Buzz" : string.Empty;
+                }
 
+                Console.WriteLine(number);
             }
 
             Console.ReadLine();
