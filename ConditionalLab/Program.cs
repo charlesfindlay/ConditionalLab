@@ -79,6 +79,8 @@ namespace ConditionalLab
 
             // FizzBuzz
 
+
+            /*
             string number = string.Empty;
 
             for (int i = 1; i <= 100; i++)
@@ -93,6 +95,36 @@ namespace ConditionalLab
 
                 Console.WriteLine(number);
             }
+
+            Console.ReadLine();
+            */
+            
+              
+             // Reverse
+
+            /*
+            Console.WriteLine("Type a string");
+            string myString = Console.ReadLine();
+
+            for (int i = myString.Length - 1; i >= 0; i--)
+                Console.Write(myString[i]);
+
+            Console.ReadLine();
+            */
+
+
+            // Multiples of 3 & 5 under 1000
+
+            int sum = 0;
+
+            for (int i = 1; i < 1000; i++)
+                sum = (i % 3 == 0 || i % 5 == 0) ? sum + i : sum;
+
+            Console.WriteLine("The sum of multiples of 3 or 5 below 1000 is {0}", sum);
+            
+
+
+
 
             Console.ReadLine();
 
