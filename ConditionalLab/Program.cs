@@ -13,6 +13,8 @@ namespace ConditionalLab
             
             // Progressive income tax calculator
             
+            
+            /*
             Console.Write("Enter your income: ");
             string userIncome = Console.ReadLine();
             int income = int.Parse(userIncome);
@@ -38,7 +40,35 @@ namespace ConditionalLab
                 Console.WriteLine("You owe {0:C} in taxes this year.", taxOwed);
 
             Console.ReadLine();
-            
+            */
+
+
+            // Time and classifications
+
+            DateTime moment = new System.DateTime();
+            moment = DateTime.Now;
+            int seconds = moment.Second;
+
+            Console.Write("Here is the time: ");
+            Console.WriteLine(moment.ToLongTimeString());
+
+            if (seconds == 0)
+                Console.WriteLine("The new minute is just beginning");
+            else if (seconds == 15)
+                Console.WriteLine("We're one quarter done");
+            else if (seconds == 30)
+                Console.WriteLine("Half way there");
+            else if (seconds == 45)
+                Console.WriteLine("Getting close to down");
+            else
+                Console.WriteLine("Working on it");
+
+
+            Console.ReadLine();
+
+
+
+
 
 
         }
